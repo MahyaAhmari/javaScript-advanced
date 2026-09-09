@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت‌نام</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="flex min-h-screen vazir-font items-center justify-center bg-linear-to-br from-indigo-500 to-purple-700 p-5">
+
+    <main class="w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl">
+        <h1 class="mb-2 text-center text-3xl font-bold text-gray-800">
+            فرم ثبت‌نام
+        </h1>
+
+        <p class="mb-8 text-center text-sm text-gray-500">
+            برای ایجاد حساب کاربری اطلاعات زیر را وارد کنید
+        </p>
+
+        <form class="signup-form space-y-5" action="#" method="post">
+
+            <div class="form-group">
+                <label class="mb-2 block text-sm font-bold text-gray-700" for="name">
+                    نام
+                </label>
+
+                <input class="form-input w-full rounded-xl border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
+            </div>
+
+            <div class="form-group">
+                <label class="mb-2 block text-sm font-bold text-gray-700" for="email">
+                    ایمیل
+                </label>
+
+                <input class="form-input w-full rounded-xl border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+            </div>
+
+            <div class="form-group">
+                <label class="mb-2 block text-sm font-bold text-gray-700" for="password">
+                    پسورد
+                </label>
+
+                <input class="form-input w-full rounded-xl border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" type="password" id="password" name="password" placeholder="پسورد خود را وارد کنید" minlength="8" required>
+            </div>
+
+            <button class="submit-button w-full rounded-xl bg-linear-to-l from-indigo-600 to-purple-600 px-4 py-3 font-bold text-white transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-200 cursor-pointer" type="submit">ارسال</button>
+
+        </form>
+    </main>
+
+    <script src="assets/js/signup.js"></script>
+</body>
+</html>
