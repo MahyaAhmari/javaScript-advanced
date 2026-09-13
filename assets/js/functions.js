@@ -19,6 +19,10 @@ setTimeout(function() {
     console.log("بعد از 2 ثانیه اجرا شد!");
 }, 2000);
     
+//arrow function//
+let sayHelloArrow = () => {
+    console.log("hello!");
+}
 
 ////////////////////////////////////////////IIFE function///////////////////////////////////////////////
 (function() {
