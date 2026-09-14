@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini todo</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body dir="rtl" class="bg-gray-200 text-black flex flex-col items-center justify-center h-screen vazir-font">
+
+    <!-- ===== عنوان ===== -->
+    <h1 class="text-4xl font-bold mb-4">mini todo<i class="fa-solid fa-clipboard-list text-yellow-500"></i></h1>
+
+    <!-- ===== دکمه افزودن تسک ===== -->
+    <button id="addBtn" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-lg cursor-pointer transition-all duration-500 flex items-center gap-1">افزودن تسک <i class="fa-solid fa-plus"></i></button>
+
+    <!-- ===== لیست تسک‌ها ===== -->
+    <ul id="list" class="list-none p-0 m-0 mt-10 w-full flex flex-col items-center justify-center"></ul>
+
+    <!-- ===== مودال ===== -->
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 hidden justify-center items-center" id="overlay">
+        <div class="hidden bg-white bg-opacity-50 flex-col items-center justify-center rounded-lg p-5 gap-5 w-1/4" id="modal">
+
+            <!-- عنوان مودال -->
+            <h2 class="text-3xl font-bold">تسک جدید</h2>
+
+            <!-- ورودی‌ها -->
+            <input type="text" name="title" id="title" placeholder="عنوان" class="border border-gray-500 rounded-lg p-2 w-full" required>
+            <textarea name="description" id="description" placeholder="توضیحات" class="border border-gray-500 rounded-lg p-2 w-full"></textarea>
+
+            <!-- دکمه‌های عملیات -->
+            <div class="flex gap-5 w-full">
+                <button class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded-lg cursor-pointer transition-all duration-500" id="saveBtn">ذخیره</button>
+                <button class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-lg cursor-pointer transition-all duration-500" id="cancelBtn">انصراف</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مودال ویرایش ===== -->
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 hidden justify-center items-center" id="editOverlay">
+        <div class="hidden bg-white bg-opacity-50 flex-col items-center justify-center rounded-lg p-5 gap-5 w-1/4" id="editModal">
+
+            <!-- عنوان مودال -->
+            <h2 class="text-3xl font-bold">ویرایش تسک</h2>
+
+            <!-- ورودی‌ها -->
+            <input type="text" name="title" id="editTitle" placeholder="عنوان" class="border border-gray-500 rounded-lg p-2 w-full" required>
+            <textarea name="description" id="editDescription" placeholder="توضیحات" class="border border-gray-500 rounded-lg p-2 w-full"></textarea>
+
+            <!-- دکمه‌های عملیات -->
+            <div class="flex gap-5 w-full">
+                <button class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded-lg cursor-pointer transition-all duration-500" id="saveEditBtn">ویرایش</button>
+                <button class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-lg cursor-pointer transition-all duration-500" id="cancelEditBtn">انصراف</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/mini todo.js"></script>
+</body>
+</html>
