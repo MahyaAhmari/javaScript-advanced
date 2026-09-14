@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی حدس عدد</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center text-white vazir-font">
+
+    <div class="bg-slate-800 p-8 rounded-2xl shadow-2xl w-96">
+        <h1 class="text-2xl font-bold mb-6 text-center">🎯 بازی حدس عدد</h1>
+        
+        <p class="text-center text-slate-400 mb-4">
+            یه عدد بین <span class="text-cyan-400 font-bold">۱</span> تا 
+            <span class="text-cyan-400 font-bold">۱۰۰</span> انتخاب کردم. حدس بزن!
+        </p>
+
+        <input type="number" id="guessInput" placeholder="عددت رو وارد کن"class="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 focus:border-cyan-400 outline-none text-center text-lg mb-4">
+
+        <button id="guessBtn"class="w-full bg-cyan-500 hover:bg-cyan-600 transition p-3 rounded-lg font-bold mb-4 cursor-pointer">حدس بزن</button>
+
+        <p id="message" class="text-center font-bold min-h-7 mb-4 rounded-lg py-1"></p>
+
+        <div class="flex justify-between text-sm text-slate-400">
+            <span>تلاش‌ها: <span id="attempts" class="text-cyan-400 font-bold">۰</span></span>
+            <span>بهترین امتیاز: <span id="bestScore" class="text-cyan-400 font-bold">۰</span></span>
+            <button id="restartBtn" class="text-yellow-400 hover:text-yellow-300 underline cursor-pointer">
+                 بازی جدید
+            </button>
+        </div>
+    </div>
+
+    <div id="history" class="mt-4 grid grid-cols-10 gap-2 justify-center mr-10 bg-slate-800 p-8 rounded-2xl shadow-2xl"></div>
+
+    <script src="assets/js/number guessing.js"></script>
+</body>
+</html>
