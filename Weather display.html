@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمایش‌دهنده آب و هوا</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class="bg-linear-to-br from-blue-900 to-slate-900 min-h-screen flex items-center justify-center text-white p-4 vazir-font">
+    <div class="bg-slate-500/50 backdrop-blur rounded-2xl shadow-2xl p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">🌤️ نمایشگر آب و هوا</h1>
+
+        <!-- فرم جستجو -->
+        <div class="flex gap-2 mb-6">
+            <input type="text" id="cityInput" placeholder="اسم شهر رو وارد کن..."class="flex-1 p-3 rounded-lg bg-slate-400 text-black border border-slate-600 focus:border-cyan-400 outline-none">
+            <button id="searchBtn"class="bg-cyan-500 hover:bg-cyan-600 transition px-4 rounded-lg font-bold flex justify-center items-center"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
+        </div>
+
+        <!-- نمایش نتیجه -->
+        <div id="result" class="text-center">
+            <p class="text-slate-400">یه شهر رو جستجو کن تا آب و هواش رو ببینی</p>
+        </div>
+    </div>
+
+    <script src="assets/js/Weather display.js"></script>
+</body>
+</html>
